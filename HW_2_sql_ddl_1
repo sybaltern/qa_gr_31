@@ -1,1 +1,373 @@
+Итак, приступим к выполнению 2го дз по sql.
 
+Само задание.
+SQL_DDL
+Первая часть.
+
+Таблица employees
+1)	Создать таблицу employees
+- id. serial,  primary key,
+- employee_name. Varchar(50), not null
+2)	Наполнить таблицу employee 70 строками.
+
+
+Таблица salary
+3)	Создать таблицу salary
+- id. Serial  primary key,
+- monthly_salary. Int, not null
+4)	Наполнить таблицу salary 15 строками:
+- 1000
+- 1100
+- 1200
+- 1300
+- 1400
+- 1500
+- 1600
+- 1700
+- 1800
+- 1900
+- 2000
+- 2100
+- 2200
+- 2300
+- 2400
+- 2500
+
+Таблица employee_salary
+5)	Создать таблицу employee_salary
+- id. Serial  primary key,
+- employee_id. Int, not null, unique
+- salary_id. Int, not null
+6)	Наполнить таблицу employee_salary 40 строками:
+- в 10 строк из 40 вставить несуществующие employee_id
+
+id	employee_id	salary_id
+1	3	7
+2	1	4
+3	5	9
+4	40	13
+5	23	4
+6	11	2
+7	52	10
+8	15	13
+9	26	4
+10	16	1
+11	33	7
+...	...	...
+
+Таблица roles
+7)	Создать таблицу roles
+- id. Serial  primary key,
+- role_name. int, not null, unique
+8)	Поменять тип столба role_name с int на varchar(30)
+9)	Наполнить таблицу roles 20 строками:
+
+id	role_name
+1	Junior Python developer
+2	Middle Python developer
+3	Senior Python developer
+4	Junior Java developer
+5	Middle Java developer
+6	Senior Java developer
+7	Junior JavaScript developer
+8	Middle JavaScript developer
+9	Senior JavaScript developer
+10	Junior Manual QA engineer
+11	Middle Manual QA engineer
+12	Senior Manual QA engineer
+13	Project Manager
+14	Designer
+15	HR
+16	CEO
+17	Sales manager
+18	Junior Automation QA engineer
+19	Middle Automation QA engineer
+20	Senior Automation QA engineer
+
+
+Таблица roles_employee
+10)	Создать таблицу roles_employee
+- id. Serial  primary key,
+- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
+- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
+11)	Наполнить таблицу roles_employee 40 строками:
+
+id	employee_id	role_id
+1	7	2
+2	20	4
+3	3	9
+4	5	13
+5	23	4
+6	11	2
+7	10	9
+8	22	13
+9	21	3
+10	34	4
+11	6	7
+...	...	...
+
+И некоторые замечания для упрощения его выполнения.
+1) Сгенерировать случайные имена можно на сайте https://randomus.ru.
+2) Облечь случайно сгенерированные имена в требуемую для подстановку в бд форму можно с помощью формулы excel =СЦЕПИТЬ(СИМВОЛ(40);СИМВОЛ(39);A1;СИМВОЛ(39);СИМВОЛ(41);СИМВОЛ(44)), где А1 - это ячейка с исходным именем
+
+1)Создать таблицу employees.
+
+create table employees(
+	id serial primary key,
+	employee_name varchar(50) not null
+);
+
+2)Наполнить таблицу employee 70 строками.
+
+insert into employees (employee_name)
+values ('Patrick Abbott'),
+('Karl Jones'),
+('Brandon Carpenter'),
+('James Daniel'),
+('Ron Evans'),
+('Roland Sherman'),
+('Gary Carroll'),
+('Henry Young'),
+('Thomas Phillips'),
+('Nicholas Holland'),
+('Phillip Jackson'),
+('Sean Schneider'),
+('Samuel Sullivan'),
+('Stephen Berry'),
+('Earl Vaughn'),
+('Reginald Sanders'),
+('Mark Lynch'),
+('Troy Brown'),
+('Stephen Nguyen'),
+('Marcus Reeves'),
+('Patrick Brown'),
+('Fred Cunningham'),
+('Joseph Hansen'),
+('Paul White'),
+('Max Bell'),
+('Russell Rios'),
+('Norman Hale'),
+('Ernest Murphy'),
+('Elmer James'),
+('Francis Lowe'),
+('Rodney Day'),
+('Robert Fox'),
+('Jeffery Burns'),
+('Willie Davis'),
+('Walter Hall'),
+('Jason Turner'),
+('Micheal Peters'),
+('Jared Greene'),
+('Ryan Roberts'),
+('William Shelton'),
+('Gary Woods'),
+('James Carroll'),
+('James Todd'),
+('Jeffrey Evans'),
+('Roy Williams'),
+('Steve Alexander'),
+('Michael Lindsey'),
+('Victor Myers'),
+('Harvey Rose'),
+('Adrian Rivera'),
+('Milton McGuire'),
+('Edward Fisher'),
+('Bryan Brown'),
+('James Andrews'),
+('Philip Singleton'),
+('Stephen Jones'),
+('Robert Reed'),
+('Randy Perkins'),
+('Richard Wilson'),
+('George Sanders'),
+('Nicholas Rivera'),
+('John Morgan'),
+('James Carter'),
+('Douglas Gutierrez'),
+('Brian Edwards'),
+('Michael Perkins'),
+('Joseph Swanson'),
+('William Simpson'),
+('James Collins'),
+('Richard Collins');
+
+select * from employees;
+
+3)Создать таблицу salary.
+
+create table salary(
+	id serial primary key,
+	monthly_salary int not null
+);
+
+4)Наполнить таблицу salary 15 строками.
+
+insert into salary (monthly_salary)
+values (1000),
+(1100),
+(1200),
+(1300),
+(1400),
+(1500),
+(1600),
+(1700),
+(1800),
+(1900),
+(2000),
+(2100),
+(2200),
+(2300),
+(2400),
+(2500);
+
+select * from salary;
+
+select * from employees;
+
+5)Создать таблицу employee_salary.
+
+create table employee_salary(
+	id serial primary key,
+	employee_id int not null unique,
+	salary_id int not null	
+);
+
+6)Наполнить таблицу employee_salary 40 строками - в 10 строк из 40 вставить несуществующие employee_id.
+
+insert into employee_salary(employee_id, salary_id)
+values (30, 16),
+(49, 15),
+(28, 14),
+(27, 13),
+(36, 12),
+(65, 11),
+(54, 10),
+(23, 9),
+(22, 8),
+(21, 7),
+(20, 6),
+(49, 5),
+(48, 4),
+(47, 3),
+(46, 2),
+(45, 1),
+(44, 15),
+(43, 14),
+(42, 13),
+(41, 12),
+(10, 11),
+(9, 10),
+(18, 9),
+(7, 8),
+(6, 7),
+(15, 6),
+(4, 5),
+(13, 4),
+(2, 3),
+(11, 2),
+(111, 1),
+(112, 2),
+(113, 3),
+(114, 4),
+(115, 5),
+(116, 6),
+(117, 7),
+(118, 8),
+(119, 9),
+(110, 10);
+
+select * from employee_salary;
+
+7)Создать таблицу roles.
+
+create table roles (
+	id serial primary key,
+	role_name int not null unique
+);
+
+8)Поменять тип столба role_name с int на varchar(30).
+
+alter table roles 
+alter column role_name type varchar(30);
+
+9)Наполнить таблицу roles 20 строками.
+
+insert into roles (role_name)
+values ('Junior Python developer'),
+('Middle Python developer'),
+('Senior Python developer'),
+('Junior Java developer'),
+('Middle Java developer'),
+('Senior Java developer'),
+('Junior JavaScript developer'),
+('Middle JavaScript developer'),
+('Senior JavaScript developer'),
+('Junior Manual QA engineer'),
+('Middle Manual QA engineer'),
+('Senior Manual QA engineer'),
+('Project Manager'),
+('Designer'),
+('HR'),
+('CEO'),
+('Sales manager'),
+('Junior Automation QA engineer'),
+('Middle Automation QA engineer'),
+('Senior Automation QA engineer');
+
+10)Создать таблицу roles_employee.
+
+create table roles_employee (
+	id serial primary key,
+	employee_id int not null unique,
+	role_id int not null,
+	foreign key (employee_id)
+		references employees (id),
+	foreign key (role_id)
+		references roles (id)
+	);
+	
+11)Наполнить таблицу roles_employee 40 строками.
+
+insert into roles_employee (employee_id,role_id)
+values (40, 1),
+(39, 2),
+(38, 3),
+(37, 4),
+(36, 5),
+(35, 6),
+(34, 7),
+(33, 8),
+(32, 9),
+(31, 10),
+(30, 11),
+(29, 12),
+(28, 13),
+(27, 14),
+(26, 15),
+(25, 16),
+(24, 17),
+(23, 18),
+(22, 19),
+(21, 20),
+(20, 20),
+(19, 19),
+(18, 18),
+(17, 17),
+(16, 16),
+(15, 15),
+(14, 14),
+(13, 13),
+(12, 12),
+(11, 11),
+(10, 10),
+(9, 9),
+(8, 8),
+(7, 7),
+(6, 6),
+(5, 5),
+(4, 4),
+(3, 3),
+(2, 2),
+(1, 1);
+
+select * from roles_employee
