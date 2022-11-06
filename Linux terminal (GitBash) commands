@@ -1,0 +1,73 @@
+==================================================================================
+Задание №1 - Linux terminal (GitBash) commands
+==================================================================================
+#1. Посмотреть где я - pwd
+#2. Создать папку - mkdir linux-1-hw
+#3. Зайти в папку - cd linux-1-hw/
+#4. Создать 3 папки - mkdir new-folder-1 new-folder-2 new-folder-3
+#5. Зайти в любоую папку - cd new-folder-1/
+#6. Создать 5 файлов (3 txt, 2 json) - touch file1.txt file2.txt file3.txt file4.json file5.json
+#7. Создать 3 папки - mkdir new-1 new-2 new-3
+#8. Вывести список содержимого папки - ls -la
+#9. + Открыть любой txt файл - vim file1.txt
+#10. + написать туда что-нибудь, любой текст - i + 
+Профессор лопух, прием, прием.
+#11. + сохранить и выйти - Esc + :wq
+#12. Выйти из папки на уровень выше - cd ..
+#13. Переместить любые 2 файла, которые вы создали, в любую другую папку -  mv C:/Users/Niki4/linux-1-hw/new-folder-1/file4.json C:/Users/Niki4/linux-1-hw/new-folder-1/file5.json C:/Users/Niki4/linux-1-hw/new-folder-2
+#14. Cкопировать любые 2 файла, которые вы создали, в любую другую папку - cp C:/Users/Niki4/linux-1-hw/new-folder-1/file2.txt C:/Users/Niki4/linux-1-hw/new-folder-1/file3.txt C:/Users/Niki4/linux-1-hw/new-folder-3
+#15. Найти файл по имени - find . -name file1.txt
+#16. Просмотреть содержимое в реальном времени (команда grep) изучите как она работает - grep 'лопух' C:/Users/Niki4/linux-1-hw/new-folder-1/file1.txt
+#17. Вывести несколько первых строк из текстового файла - head -2 C:/Users/Niki4/linux-1-hw/new-folder-1/file1.txt
+#18. Вывести несколько последних строк из текстового файла - tail -2 C:/Users/Niki4/linux-1-hw/new-folder-1/file1.txt
+#19. Просмотреть содержимое длинного файла (команда less) изучите как она работает. - less C:/Users/Niki4/linux-1-hw/new-folder-1/file1.txt
+#20. Вывести дату и время - date
+==================================================================================
+*Задание №2 - Отправить http запрос на сервер.
+==================================================================================
+$ curl 'http://162.55.220.72:5005/object_info_3?name=VasyaPupkin&age=99&salary=10000'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   386  100   386    0     0   3265      0 --:--:-- --:--:-- --:--:--  3327{
+  "age": "99",
+  "family": {
+    "children": [
+      [
+        "Alex",
+        24
+      ],
+      [
+        "Kate",
+        12
+      ]
+    ],
+    "pets": {
+      "cat": {
+        "age": 3,
+        "name": "Sunny"
+      },
+      "dog": {
+        "age": 4,
+        "name": "Luky"
+      }
+    },
+    "u_salary_1_5_year": 40000
+  },
+  "name": "VasyaPupkin",
+  "salary": 10000
+}
+
+==================================================================================
+*Задание №3 - Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+==================================================================================
+Файл - dz-Linux-2.sh
+Комманда - ./dz-Linux-2.sh
+
+#!/bin/bash
+cd linux-1-hw/
+mkdir new-folder-1 new-folder-2 new-folder-3
+cd new-folder-1/
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir new-1 new-2 new-3
+ls -la
+mv C:/Users/Niki4/linux-1-hw/new-folder-1/file4.json C:/Users/Niki4/linux-1-hw/new-folder-1/file5.json C:/Users/Niki4/linux-1-hw/new-folder-2
