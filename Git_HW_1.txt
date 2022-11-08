@@ -1,1 +1,324 @@
+JSON
 
+1. Создать внешний репозиторий c названием JSON.
+
+1) Зайти в свой профиль на GitHub.
+2) Нажать "Repositories"
+3) Далее нажать "New"
+4) Написать название репозитория "JSON", поставить галочку "Add a README file" и нажать "Create repository"
+
+2. Клонировать репозиторий JSON на локальный компьютер. 
+
+1) Зайти в созданный репозиторий JSON
+2) Нажать на кнопку "Code"
+3) Скопировать ссылку 
+4) Зайти в Git Bash
+5) Написать команду git clone и вставить скопированную ссылку с GitHub
+
+3. Внутри локального JSON создать файл “new.json”.
+
+1) зайти в папку JSON - cd JSON 
+2) создать новый файл - touch new.json 
+
+4. Добавить файл под гит.
+git add new.json
+
+5. Закоммитить файл.
+git commit -m "add 1 file"
+
+6. Отправить файл на внешний GitHub репозиторий.
+git push
+
+7. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+
+1) открыть редактор - vim new.json  
+2) начать редактирование - i 
+3) { "surname": "Ivanov", "name": "Nikita", "age": 36, "pets": 0, "preferred_salary": "10000 dollars"}
+4) сохранить и выйти - :wq 
+
+8. Отправить изменения на внешний репозиторий.
+
+1) добавbnm файл под гит - git add new.json  
+2) закоммитить изменения - git commit -m "add changes new.json" 
+3) отправить на внешний репозиторий - git push
+
+9. Создать файл preferences.json
+touch preferences.json
+
+10. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.
+
+1) открыть редактор - vim preferences.json 
+2) начать редактирование - i
+3) { "favorite_movie": "Ogniem i mieczem", "favorite_show": "none", "favorite_food": "milk", "favorite_season": "winter", "country": "Russia"}
+4) сохранить и выйти - :wq
+
+11. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON
+
+1) создать файл - touch sklls.json
+2) открыть редактор - vim sklls.json
+3) начать редактирование - i
+4) { "soft-skills": 
+	       { "1": "First soft-skill",
+		   "2": "Second soft-skill",
+		   "3": "Third soft-skill"},
+  "hard-skills":
+               { "1": "First hard-skill",
+		      "2": "Second hard-skill",
+		      "3": "Third hard-skill"}
+}
+5) сохранить и выйти - :wq
+
+12. Отправить сразу 2 файла на внешний репозиторий.
+
+1) добавить все под гит - git add .
+2) проверить статус - git status 
+2) закоммитить изменения - git commit -m "add new files" 
+3) отправить на внешний репозиторий - git push 
+
+13. На веб интерфейсе создать файл bug_report.json.
+
+1) В репозитории нажать кнопку "Add file" и "Create new file"
+2) Назвать файл bug_report.json
+
+14. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажать на кнопку "Commit new file"
+
+15. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.
+
+{"fields":  
+ {"ID": "1",
+  "Title": "Не работает Viber",
+  "Priority": "normal",
+  "Severity": "minor",
+  "Environment": "Google Chrome Windows 11",
+  "Steps": "{'1': 'Зайти на сайт capital.com', '2': 'Выбрать Viber, в качестве средства связи с компанией', '3': 'Нажать на значок Viber'}",
+  "ExpectedResult": "Viber работает",
+  "ActualResult":"Viber не работает"}
+}
+
+16. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажать на кнопку "Commit changes"
+
+17. Синхронизировать внешний и локальный репозиторий JSON
+git pull
+
+
+   XML
+
+1. Создать внешний репозиторий c названием XML.
+
+1) Зайти в свой профиль на GitHub.
+2) Нажать "Repositories"
+3) Далее нажать "New"
+4) Написать название репозитория "XML", поставить галочку "Add a README file" и нажать на "Create repository"
+
+2. Клонировать репозиторий XML на локальный компьютер.
+
+1) Зайти в созданный репозиторий XML
+2) Нажать на кнопку "Code"
+3) Скопировать ссылку 
+4) Зайти в Git Bash
+5) Написать команду git clone вставить скопированную ссылку с GitHub
+
+3. Внутри локального XML создать файл “new.xml”.
+
+1) зайти в папку XML - cd XML 
+2) создать новый файл - touch new.xml
+
+4. Добавить файл под гит.
+git add new.xml
+
+5. Закоммитить файл.
+git commit -m "add 1 file"
+
+6. Отправить файл на внешний GitHub репозиторий.
+git push
+
+7. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+
+1) открыть редактор - vim new.json  
+2) начать редактирование - i 
+3) <?xml version="1.0" encoding="windows-1251"?>
+   <root>
+   <surname>Ivanov</surname>
+   <name>Nikita</name>
+   <age>36</age>
+   <pets>0</pets>
+   <preferred_salary>10000 dollars</preferred_salary>
+   </root>
+4) сохранить и выйти - :wq
+
+8. Отправить изменения на внешний репозиторий.
+
+1) закоммитить файл - git commit -am "add changes new.xml" 
+2) отправить файл на внешний репозиторий - git push 
+
+9. Создать файл preferences.xml
+touch preferences.xml
+
+10. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+
+1) открыть редактор - vim preferences.json 
+2) начать редактирование - i
+3)<root>
+  <favorite_movie>Ogniem i mieczem</favorite_movie>
+  <favorite_show>none</favorite_show>
+  <favorite_food>milk</favorite_food>
+  <favorite_season>winter</favorite_season>
+  <country>Russia</country>
+  </root>
+4) сохранить и выйти - :wq
+
+11. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+
+1) создать файл - touch skills.xml
+2) открыть редактор - vim skills.xml 
+3) начать редактирование - i
+4) <root>
+    <soft-skills>
+        <item1>First soft-skill</item1>
+        <item2>Second soft-skill</item2>
+        <item3>Third soft-skill</item3>
+    </soft-skills>
+    <hard-skills>
+        <item1>First hard-skill</item1>
+        <item2>Second hard-skill</item2>
+        <item3>Third hard-skill</item3>
+    </hard-skills>
+</root>
+5) сохранить и выйти - :wq
+
+12. Сделать коммит в одну строку.
+git add . | git commit -m "add new files"
+
+13. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+14. На веб интерфейсе создать файл bug_report.xml.
+
+1) В репозитории нажать кнопку "Add file" и "Create new file"
+2) Назвать файл bug_report.xml
+
+15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажать на кнопку "Commit new file"
+
+16. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+<?xml version="1.0" encoding="UTF-8" ?>
+<fields>
+    <ID>1</ID>
+    <Title>Не работает Viber</Title>
+    <Priority>normal</Priority>
+    <Severity>minor</Severity>
+    <Environment>Google Chrome Windows 11</Environment>
+    <Steps>{'1': 'Зайти на сайт capital.com', '2': 'Выбрать Viber, в качестве средства связи с компанией', '3': 'Нажать на значок Viber'}</Steps>
+    <ExpectedResult>Viber работает</ExpectedResult>
+    <ActualResult>Viber не работает</ActualResult>
+</fields>
+
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажать на кнопку "Commit changes"
+
+18. Синхронизировать внешний и локальный репозиторий XML
+git pull
+
+   TXT
+
+1. Создать внешний репозиторий c названием TXT.
+
+1) Зайти в свой профиль на GitHub.
+2) Нажать "Repositories"
+3) Далее нажать "New"
+4) Написать название репозитория "TXT", поставить галочку "Add a README file" и нажать на "Create repository"
+
+2. Клонировать репозиторий TXT на локальный компьютер.
+
+1) Зайти в созданный репозиторий TXT
+2) Нажать на кнопку "Code"
+3) Скопировать ссылку 
+4) Зайти в Git Bash
+5) Написать команду git clone вставить скопированную ссылку с GitHub
+
+3. Внутри локального TXT создать файл “new.txt”.
+
+1) зайти в папку - cd TXT 
+2) создать файл - tocuh new.txt 
+
+4. Добавить файл под гит.
+git add new.txt
+
+5. Закоммитить файл.
+git commit -m "add 1 file"
+
+6. Отправить файл на внешний GitHub репозиторий.
+git push
+
+7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+
+1) открыть редактор - vim new.txt 
+2) начать редактирование - i 
+3) Ivanov Nikita, age 36, 0 pets, preferrede sallary 10000 dollars
+4) сохранить и выйти - :wq
+
+8. Отправить изменения на внешний репозиторий.
+
+1) закоммитить изменения - git commit -am "add changes new.txt " 
+2) отправить файл на внешний репозиторий - git push 
+
+9. Создать файл preferences.txt
+touch preferences.txt
+
+10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+
+1) открыть редактор - vim new.txt 
+2) начать редактирование - i 
+3) Favorite movie is Ogniem i mieczem. Favorite show is none. Favorite food is milk. Favorite season is winter. Country Russia.
+4) сохранить и выйти - :wq
+
+11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+
+1) создать файл - touch sklls.txt
+2) открыть редактор - vim sklls.txt
+3) начать редактирование - i  
+4)Soft-skills:
+    1. First soft-skill
+    2. Second soft-skill
+    3. Third soft-skill 
+Hard-skills:
+    1. First hard-skill
+    2. Second hard-skill
+    3. Third hard-skill
+5) сохранить и выйти - :wq
+
+12. Сделать коммит в одну строку.
+git commit -am "add new files"
+
+13. Отправить сразу 2 файла на внешний репозиторий.
+git push
+
+14. На веб интерфейсе создать файл bug_report.txt.
+
+1) В репозитории нажать кнопку "Add file" и "Create new file"
+2) Назвать файл bug_report.txt
+
+15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажать "Commit new file"
+
+16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+
+1)ID: 1
+2)Title: Не работает Viber
+3)Priority: normal
+4)Severity: minor
+5)Environment: Google Chrome Windows 11
+6)Steps: 
+1. Зайти на сайт capital.com
+2. Выбрать Viber, в качестве средства связи с компанией
+3. Нажать на значок Viber
+7)Expected Result: Viber работает
+8)Actual Result: Viber не работает
+
+17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажать на кнопку "Commit changes"
+
+18. Синхронизировать внешний и локальный репозиторий TXT
+git pull
