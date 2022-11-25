@@ -23,7 +23,7 @@ GitHub. HW_2
 3) Назвать новый репозиторий GitHub_HW_2, отметить Add a README file и нажать Create repository
 4) Зайти в созданный репозиторий GitHub_HW_2, нажать кнопку Code и скопировать его  
 5) Зайти в GitBash и вставить скопированную выше ссылку git clone 
-6) Перейти в папку GitHub_HW_2 - cd GitHub_HW_2 перейти в папку GitHub_HW_2
+6) Перейти в папку GitHub_HW_2 - cd GitHub_HW_2
 7) И создать соотв. ветки - git branch Postman | git branch Jmeter | git branch CheckLists | git branch Bag_Reports | git branch SQL | git branch Charles | git branch Mobile_testing 
 
 2. Запушить все ветки на внешний репозиторий
